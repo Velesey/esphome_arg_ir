@@ -8,10 +8,10 @@ namespace arg {
 // Support for ARG air conditioners with KKG26A-C1 remote
 
 // Temperature
-const float ARG_TEMP_MIN = 16.0;
-const float ARG_TEMP_MAX = 32.0;
+static constexpr float ARG_TEMP_MIN = 16.0f;
+static constexpr float ARG_TEMP_MAX = 32.0f;
 
-class ArgClimate : public climate_ir::ClimateIR {
+class ArgClimate final : public climate_ir::ClimateIR {
  public:
   ArgClimate()
       : climate_ir::ClimateIR(ARG_TEMP_MIN, ARG_TEMP_MAX, 1.0f, true, true,
